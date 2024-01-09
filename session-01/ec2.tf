@@ -1,6 +1,14 @@
-#  resource "aws_instance" "myec2" {
+ resource "aws_instance" "myec2" {
 
-#     ami = var.myami
-#     instance_type = var.myinstancetype
-#     security_groups = [aws_security_group.allow_all.name]  
-# } 
+    ami = var.myami
+    instance_type = var.myinstancetype
+    security_groups = [aws_security_group.allow_all.name]  
+
+    tags = {
+      Name= MongoDB
+      Project= Roboshop
+      component= MongoDB
+      Env= Dev
+    }
+} 
+
