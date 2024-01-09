@@ -15,3 +15,15 @@ variable "sg_cidr" {
     default = ["0.0.0.0/0"]
   
 }
+
+variable "mytags" {
+    type = map
+    default= {
+    
+      Name= "MongoDB"
+      Project= "Roboshop"
+      component= "MongoDB"
+      Env= "Dev"
+    }
+    
+}
