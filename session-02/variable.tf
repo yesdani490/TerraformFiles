@@ -4,5 +4,5 @@ variable "myami" {
   default = "ami-03265a0778a880afb"
 }
 variable "myinstancename" {
-  default = "MongoDB"
+  default = "Cart"
 }
