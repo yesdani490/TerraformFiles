@@ -5,10 +5,10 @@
     security_groups = [aws_security_group.allow_all.name]  
 
     tags = {
-      Name= MongoDB
-      Project= Roboshop
-      component= MongoDB
-      Env= Dev
+      Name= "MongoDB"
+      Project= "Roboshop"
+      component= "MongoDB"
+      Env= "Dev"
     }
 } 
 
