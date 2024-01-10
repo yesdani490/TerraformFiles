@@ -8,4 +8,13 @@ resource "aws_instance" "countofinstances" {
     }
 }
 
+resource "aws_route53_record" "record" {
+  count = 10
+  zone_id = zone_id
+  name    = var.instance-name[count.index].joindevops.top
+  type    = "A"
+  ttl     = 1
+  records = [aws_eip.lb.public_ip]
+}
+
 # "MongoDB", "Cart", "shipping", "mysql", "rabbitmq", "web", "user", "catalogue", "redis", "payments"  

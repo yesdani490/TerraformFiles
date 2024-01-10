@@ -8,3 +8,9 @@ variable "instance-name" {
     default= ["MongoDB", "Cart", "shipping", "mysql", "rabbitmq", "web", "user", "catalogue", "redis", "payments" ]
   
 }
+
+variable "zone_id" {
+
+    default = "Z05740803UNSE6BOTDZEC"
+  
+}
