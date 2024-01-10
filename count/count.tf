@@ -8,13 +8,13 @@ resource "aws_instance" "countofinstances" {
     }
 }
 
-# resource "aws_route53_record" "record" {
-#   count = 10
-#   zone_id = var.zone_id
-#   name    = "${var.instance-names[count.index]}.joindevops.top"
-#   type    = "A"
-#   ttl     = 1
-#   records = [aws_instance.countofinstances[count.index].private_ip]
-# }
+resource "aws_route53_record" "record" {
+  count = 10
+  zone_id = var.zone_id
+  name    = "${var.instance_names[count.index]}.joindevops.top"
+  type    = "A"
+  ttl     = 1
+  records = [aws_instance.countofinstances[count.index].private_ip]
+}
 
 # "MongoDB", "Cart", "shipping", "mysql", "rabbitmq", "web", "user", "catalogue", "redis", "payments"  
