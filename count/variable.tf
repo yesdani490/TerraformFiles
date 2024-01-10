@@ -5,7 +5,7 @@ variable "myami" {
 }
 variable "instance-names" {
     type = list
-    default= ["MongoDB", "Cart", "shipping", "mysql", "rabbitmq", "web", "user", "catalogue", "redis", "payments" ]
+    default= ["MongoDB", "Cart", "shipping", "mysql", "rabbitmq", "web", "user", "catalogue", "redis", "payments"]
   
 }
 
