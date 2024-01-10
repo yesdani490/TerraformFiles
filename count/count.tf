@@ -1,10 +1,10 @@
 resource "aws_instance" "countofinstances" {
     count = 10
     ami = var.myami
-    instance_type = var.instance-names[count.index] == "MongoDB" || var.instance-names[count.index] == "mysql" ? "t3.micro" : "t2.micro"
+    instance_type = var.instance_names[count.index] == "MongoDB" || var.instance_names[count.index] == "mysql" ? "t3.micro" : "t2.micro"
 
     tags = {
-      name= var.instance-names[count.index]
+      name= var.instance_names[count.index]
     }
 }
 
