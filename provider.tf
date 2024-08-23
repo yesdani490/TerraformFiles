@@ -8,7 +8,11 @@ terraform {
 
   backend "s3" {
     bucket = "roboshopbucket"
+<<<<<<< HEAD
     key    = "tfvars-example"
+=======
+    key    = "vpc-demo"
+>>>>>>> 5c36a1d (terraformVPC)
     region = "us-east-1"
     dynamodb_table = "roboshop-dynamotable"
   }
